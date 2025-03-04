@@ -22,6 +22,7 @@ jobs:
         run: npm run test
 
   Build:
+    needs: Test # Build가 실행되려면 Test라는 job이 먼저 실행되어야 한다.
     runs-on: ubuntu-latest
     steps:
       - name: 코드 가져오기
